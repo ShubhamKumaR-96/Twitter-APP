@@ -1,19 +1,11 @@
 import express from 'express'
+import { commentController } from '../../controller/commentController.js'
 
 const router=express.Router()
 
 
-router.get('/',(req,res)=>{
-    res.json({
-        msg:"Welcome to the tweet routes"
-    })
-})
-router.get('/:id',(req,res)=>{
-    res.json({
-        msg:"Welcome to the tweet routes",
-        id:req.params.id
-    })
-})
+router.get('/',commentController)
+
 
 
 
